@@ -43,7 +43,7 @@ def solve_view(scene, mesh_object, view, strength, preserve_face=True,
     changed = 0
 
     for pin in view.pins:
-        if pin.vertex_index >= len(points):
+        if pin.vertex_index < 0 or pin.vertex_index >= len(points):
             continue
         anchor = points[pin.vertex_index]
         projected = _project(scene, camera, anchor)

@@ -8,14 +8,16 @@ body session and its persistent references.
 from bpy.props import PointerProperty
 
 from .settings import CBSceneSettings, CBReferenceView, CBPin
-from .operators import (CB_OT_CreateSession, CB_OT_AddReferenceView,
-                        CB_OT_AddPin, CB_OT_Solve, CB_OT_ResetMesh,
+from .operators import (CB_OT_CreateSession, CB_OT_AddReferencePhoto,
+                        CB_OT_RemoveReferenceView, CB_OT_Solve, CB_OT_ResetMesh,
                         CB_PT_Panel)
+from .pin_interaction import CB_OT_PinMode
 
 
 CLASSES_TO_REGISTER = (CBPin, CBReferenceView, CBSceneSettings,
-                       CB_OT_CreateSession, CB_OT_AddReferenceView,
-                       CB_OT_AddPin, CB_OT_Solve, CB_OT_ResetMesh,
+                       CB_OT_CreateSession, CB_OT_AddReferencePhoto,
+                       CB_OT_RemoveReferenceView, CB_OT_PinMode, CB_OT_Solve,
+                       CB_OT_ResetMesh,
                        CB_PT_Panel)
 
 
